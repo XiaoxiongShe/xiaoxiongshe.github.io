@@ -1,8 +1,161 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <title>枭雄社官网_计算器</title>
+<img src="headhbiao.png" alt=" ">
+<h1>枭雄社官网 计算器</h1>
+<p><small>Internet DogHead XiaoXiong Company Official Website</small></p>	
+  <br>	
+  <p id="dateAndDay"></p>
+<script>
+var today = new Date();
+var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+var days = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+var day = days[today.getDay()];
+document.getElementById("dateAndDay").innerHTML = date +' '+ day;
+</script>
+  </div>
+  <hr>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
+.box {
+border-radius: 6px;
+background: #f3f0f1;
+box-shadow:  6px 6px 12px #afadae,
+             -6px -6px 12px #ffffff;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  *,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+// Codepen spesific styling - only to center the elements in the pen preview and viewport
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+// End Codepen spesific styling
+
+body {
+	font-family: "Inter", sans-serif;
+	color: #303030;
+	background-color: mix(#fff, #342ead, 95%);
+}
+
+.menu {
+	display: flex;
+	flex-grow: 1;
+	height: 72px;
+	max-width: 370px;
+	border-radius: 12px;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0 0 1px 0 rgba(#342ead, 0.25), 0 15px 30px 0 rgba(#342ead, 0.1);
+}
+
+.menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	text-decoration: none;
+	&:focus,
+	&:hover {
+		outline: none;
+		.material-icons {
+			font-family: "Material Icons";
+			color: #342ead;
+		}
+
+		.menu-item-label {
+			color: #342ead;
+		}
+	}
+}
+
+.material-icons {
+	font-family: "Material Icons Outlined";
+	display: block;
+	margin-bottom: 4px;
+	font-size: 26px;
+	color: mix(#fff, #342ead, 60%);
+	transition: 0.25s ease;
+}
+
+.menu-item-label {
+	display: block;
+	font-size: 13px;
+	color: mix(#fff, #342ead, 70%);
+	transition: 0.25s ease;
+}
+
+.popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+  .popup-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+  .popup-button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+  .popup-button:hover {
+      background-color: #e0e0e0;
+    }
+
+  .blue-box {
+      width: 350px;
+      height: 70px;
+      background-color: blue;
+    }	 
+
+  .blue-div {
+  width: 300px;
+  height: 200px;
+  background-color: blue;  /* 蓝色 div 的样式 */
+}  
+	  
+a {
+  color: black;
+}  
   .calculator {
       width: 300px;
       background-color: #f1f1f1;
@@ -96,6 +249,18 @@
       document.getElementById('input').value = '';
     }
   </script>
+  <footer>
+    <hr>
+    <br>
+    <p>Copyright © 2024 xiaoxiongshe.github.io All rights reserved | 版权所有·保留所有权利 |枭雄社·HEUFT R 主办
+    <br>
+    建议您使用Chrome、Firefox、Edge、IE10及以上版本和360等主流浏览器浏览本网站</p>
+    <small><img src="icon120.png" alt="WMZ" width="1%" height="2%"> <a href="https://icp.gov.moe/?keyword=20240977" target="_blank">萌ICP备20240977号</a></small><br></p>
+    <br>
+    <br>
+    <br>
+    <br>
+  </footer>
 </body>
 
 </html>
