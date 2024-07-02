@@ -4,6 +4,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
   <title>IDH 枭雄社</title>
+  <div class="blue-div">
   <h1>IDH 枭雄社</h1>
   <p><small>Internet DogHead XiaoXiong</small></p>
   <br>	
@@ -15,7 +16,7 @@ var days = ['星期日', '星期一', '星期二', '星期三', '星期四', '�
 var day = days[today.getDay()];
 document.getElementById("dateAndDay").innerHTML = date +' '+ day;
 </script>
-  
+  </div>
   <hr>
   
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -138,7 +139,19 @@ body {
 
   .popup-button:hover {
       background-color: #e0e0e0;
-    }	  
+    }
+
+  .blue-box {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }	 
+
+  .blue-div {
+  width: 300px;
+  height: 200px;
+  background-color: blue;  /* 蓝色 div 的样式 */
+}  
   </style>	
 </head>
 
@@ -167,7 +180,7 @@ body {
   </script>
 	
 <h3 style="text-align: center;">网站导航</h3>	
-  <div class="container" style="text-align: center;">
+  <div class="blue-box">
 	<!-- code here -->
 	<nav class="menu" style="text-align: center;">
 		<a href="https://wang-mz-nan.github.io/rule" class="menu-item">
@@ -184,7 +197,7 @@ body {
 		</a>
 	</nav>
 	<!-- end of code -->
-</div>
+  </div>
   
     <br/>
     <h3 style="text-align: center;">官方媒体</h3>
@@ -206,7 +219,7 @@ body {
 <footer>
     <hr>
     <br>
-    <p>Copyright © 2024 wang-mz-nan.github.io All rights reserved | 版权所有·保留所有权利 |枭雄社·HEUFT R 主办
+    <p>Copyright © 2024 xiaoxiongshe.github.io All rights reserved | 版权所有·保留所有权利 |枭雄社·HEUFT R 主办
     <br>
     建议您使用Chrome、Firefox、Edge、IE10及以上版本和360等主流浏览器浏览本网站</p>
     <small><img src="icon120.png" alt="WMZ" width="1%" height="2%"> <a href="https://icp.gov.moe/?keyword=20240977" target="_blank">萌ICP备20240977号</a></small><br></p>
