@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  .calculator {
+      width: 300px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+  .calculator input {
+      width: 70px;
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+  .calculator button {
+      width: 70px;
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+    <input type="text" id="input" readonly>
+    <button onclick="appendNumber(1)">1</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="appendOperator('+')">+</button>
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendNumber(5)">5</button>
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="appendOperator('-')">-</button>
+    <button onclick="appendNumber(7)">7</button>
+    <button onclick="appendNumber(8)">8</button>
+    <button onclick="appendNumber(9)">9</button>
+    <button onclick="appendOperator('*')">*</button>
+    <button onclick="appendNumber(0)">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearAll()">C</button>
+  </div>
+
+  <script>
+    let inputValue = '';
+
+    function appendNumber(num) {
+      inputValue += num;
+      document.getElementById('input').value = inputValue;
+    }
+
+    function appendOperator(operator) {
+      inputValue += operator;
+      document.getElementById('input').value = inputValue;
+    }
+
+    function calculate() {
+      try {
+        let expression = inputValue;
+        if (expression.includes('/') && expression.split('/')[1] === '0') {
+          document.getElementById('input').value = '除数不能为零';
+          return;
+        }
+        let result = eval(expression);
+        document.getElementById('input').value = result;
+        inputValue = result.toString();
+      } catch (error) {
+        document.getElementById('input').value = '错误';
+      }
+    }
+
+    function clearAll() {
+      inputValue = '';
+      document.getElementById('input').value = '';
+    }
+  </script>
+</body>
+
+</html>
